@@ -4,10 +4,15 @@ describe('Test for submiting payment info', () => {
         billAmtInput.value = 50;
         tipAmtInput.value = 5;
     })
-    it('should update payment table, and summary table', () => {
+    it('should update payment id', () => {
         createCurPayment();
         submitPaymentInfo();
 
         expect(paymentId).toEqual(1);
+        expect(Object.values(allPayments)).toEqual([Object({
+            billAmt: '50',
+            tipAmt: '5',
+            tipPercent: 10
+        })]);
     })
 })
