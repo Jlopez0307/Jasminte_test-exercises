@@ -31,7 +31,7 @@ describe('Update server table test', () => {
     submitPaymentInfo();
 
     expect(Object.keys(allPayments).length).toEqual(1);
-    expect(sumPaymentTotal('tipAmt') / Object.keys(allServers).length).toEqual(5.00)
+    expect(sumPaymentTotal('tipAmt') / Object.keys(allServers).length).toEqual(5.00);
   })
   afterEach(() => {
     //Clears server input
